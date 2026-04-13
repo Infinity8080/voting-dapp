@@ -19,6 +19,7 @@ pub mod voting {
         poll.poll_name = name;
         poll.poll_start_time = start_time;
         poll.poll_end_time = end_time;
+        poll.poll_index = 0 ;
 
         Ok(())
     }
