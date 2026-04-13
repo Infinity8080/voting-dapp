@@ -97,9 +97,6 @@ pub struct Vote<'info> {
     )]
     pub poll_account: Account<'info, PollAccount>,
     #[account(
-        init,
-        payer=signer,
-        space=8+CandidateAccount::INIT_SPACE,
         seeds=[poll_id.to_le_bytes().as_ref(),candidate.as_ref()],
         bump
     )]
