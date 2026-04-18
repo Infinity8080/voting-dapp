@@ -6,13 +6,13 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-voting = "A6a7ZHwc5cvh1yevgdPzZpvQB7eGEzt9E4CZQvTDPDXY"
+voting = "Doe7Bt34WWnGjqNjTpfYksejhSKLPs7jEtWNwZLjm7KP"
 
 [provider]
 cluster = "localnet"
 wallet = "~/.config/solana/id.json"
 
 [scripts]
-test = "cargo test"
+test = "cargo test --features no-entrypoint --test litesvm"
 
 [hooks]

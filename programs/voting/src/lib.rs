@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("A6a7ZHwc5cvh1yevgdPzZpvQB7eGEzt9E4CZQvTDPDXY");
+declare_id!("Doe7Bt34WWnGjqNjTpfYksejhSKLPs7jEtWNwZLjm7KP");
 
 #[program]
 pub mod voting {
@@ -19,7 +19,7 @@ pub mod voting {
         poll.poll_name = name;
         poll.poll_start_time = start_time;
         poll.poll_end_time = end_time;
-        poll.poll_index = 0 ;
+        poll.poll_index = 0;
 
         Ok(())
     }
@@ -98,6 +98,7 @@ pub struct Vote<'info> {
     )]
     pub poll_account: Account<'info, PollAccount>,
     #[account(
+        mut,
         seeds=[poll_id.to_le_bytes().as_ref(),candidate.as_ref()],
         bump
     )]
