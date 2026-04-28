@@ -183,6 +183,7 @@ fn test_vote() {
         })
         .instruction()
         .unwrap();
+
     let result = ctx.execute_instruction(ix, &[&user]).unwrap();
     result.assert_success();
     let poll_account: PollAccount = ctx.get_account(&poll_pda).unwrap();
