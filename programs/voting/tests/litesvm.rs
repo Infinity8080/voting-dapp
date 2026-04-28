@@ -3,7 +3,6 @@ use anchor_lang::{declare_program, Id};
 use anchor_litesvm::{
     AnchorContext, AnchorLiteSVM, AssertionHelpers, Keypair, Pubkey, Signer, TestHelpers,
 };
-
 declare_program!(voting);
 
 use self::voting::accounts::PollAccount;
